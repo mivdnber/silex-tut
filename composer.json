@@ -1,0 +1,13 @@
+{
+    "name": "geography/php-app-template",
+    "description": "A template for a modern geographic PHP web application",
+    "authors": [
+        {
+            "name": "Michiel Van den Berghe",
+            "email": "michiel.vdb@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~1.2"
+    }
+}
