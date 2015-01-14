@@ -2,3 +2,6 @@ node_modules
 dist
 vendor/
 bower_components/
+
+# should be copied from app/config.sample.php
+app/config.php

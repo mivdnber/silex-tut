@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title "A basic web application" %}</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+    {% block style "" %}
+  </head>
+
+  <body>
+    {% block body %}
+    <h1>Basic web application</h1>
+    <p>This is the basic layout for your basic web application! Enjoy!</p>
+    {% endblock body %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    {% block script "" %}
+  </body>
+</html>

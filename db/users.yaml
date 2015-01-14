@@ -1,0 +1,21 @@
+create_user_table: |
+    create table if not exists users(
+        username text primary key not null,
+        password text,
+        role text not null default 'user',
+        firstname text,
+        lastname text
+    );
+
+drop_user_table: |
+    drop table if exists users;
+
+add_user: |
+    insert into users(username, password, role, firstname, lastname)
+    values(:username, :password, :role, :firstname, :lastname)
+
+delete_user: delete from users where username = :username
+
+user: select * from users where username = :username
+
+users: select * from users
