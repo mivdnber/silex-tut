@@ -2,10 +2,11 @@
     'namespace' => 'example',
     'db' => [
         //"schema" is just another word for "database"
-        'schema' => 'postgis',
+        'schema' => 'misc',
         'server' => 'localhost',
-        'username' => 'postgis',
-        'password' => 'postgis',
+        'username' => 'misc',
+        'password' => 'misc',
         'queriesFolder' => __DIR__ . '/../db/queries'
-    ]
+    ],
+    'security' => 'cas'
 ];
