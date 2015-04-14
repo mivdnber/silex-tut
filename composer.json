@@ -2,6 +2,7 @@
     "name": "geography/php-app-template",
     "description": "A template for a simple geographic web application using modern PHP",
     "license": "WTFPL",
+    "prefer-stable": true,
     "minimum-stability": "dev",
     "authors": [
         {
@@ -14,10 +15,10 @@
         "silex/silex": "~1.2",
         "symfony/security": "~2.3",
         "symfony/locale": "~2.6",
-        "ugent-geography/php-geotools": "dev-master",
-        "jasig/phpcas": "~1.3@dev",
-        "symfony/twig-bridge": "~3.0@dev",
-        "symfony/form": "~3.0@dev",
-        "symfony/validator": "~3.0@dev"
+        "ugent-geography/php-geotools": "~2.0",
+        "jasig/phpcas": "~1.3",
+        "symfony/twig-bridge": "~2.6",
+        "symfony/form": "~2.6",
+        "symfony/validator": "~2.6"
     }
 }
