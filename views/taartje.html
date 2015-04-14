@@ -2,20 +2,25 @@
 {% block title 'Taartje!' %}
 
 {% block body %}
-<h1>{{taartje.date}} - {{taartje.organizer}}</h1>
-<p>{{taartje.pitch}}</p>
+<div class="content">
+  <h1>
+    Taartje van {{taartje.organizer}}
+    <p>{{taartje.date}}</p>
+  </h1>
+  <p>{{taartje.pitch}}</p>
+  <p>Er zijn {{participants|length}} deelnemer(s)</p>
 
-<p>Er zijn {{participants|length}} deelnemer(s)</p>
+  <form method="post">
+    <input id="name-input" name="name" type="text">
+    <input type="submit" value="Ik doe mee!">
+  </form>
 
-<form method="post">
-  <input id="name-input" name="name" type="text">
-  <input type="submit" value="Ik doe mee!">
-</form>
+  <ul class="participants">
+    {% for participant in participants %}
+    <li>{{participant.name}}</li>
+    {% endfor %}
+  </ul>
 
-<ul class="participants">
-  {% for participant in participants %}
-  <li>{{participant.name}}</li>
-  {% endfor %}
-</ul>
-
+  <a href="{{path('home')}}">Terug naar het overzicht...</a>
+</div>
 {% endblock %}
