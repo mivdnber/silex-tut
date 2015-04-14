@@ -39,7 +39,6 @@ create table participant(
     taartje_id integer references taartje on delete cascade,
     name text not null
 );
-EOF
 
 insert into taartje(date, organizer, pitch) values
 ('2015-04-17', 'Michiel', 'Hoera, taartjes!'),
@@ -61,4 +60,5 @@ a2dissite 000-default
 a2ensite tvdw
 a2enmod rewrite
 service apache2 restart
+cd /vagrant
 sudo -u vagrant composer install
