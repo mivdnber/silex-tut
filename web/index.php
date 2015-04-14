@@ -24,26 +24,7 @@ $app->get('/', function(App $app) use($db) {
 })->bind('home');
 
 $app->get('/taartje/{id}', function(App $app, $id) use($db) {
-    $taartje_query = '
-        select * from taartje
-        where id = :id
-    ';
-    $stm = $db->prepare($taartje_query);
-    $stm->execute(['id' => $id]);
-    $taartje = $stm->fetch();
-
-    $participants_query = '
-        select * from participant
-        where taartje_id = :id
-    ';
-    $stm = $db->prepare($participants_query);
-    $stm->execute(['id' => $id]);
-    $participants = $stm->fetchAll();
-
-    return $app->render('taartje.html', [
-        'taartje' => $taartje,
-        'participants' => $participants
-    ]);
+    // Todo
 })->bind('taartje');
 
 $app->run();
