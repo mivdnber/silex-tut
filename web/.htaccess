@@ -1,4 +1,3 @@
-# /web/.htaccess
 <IfModule mod_rewrite.c>
     Options -MultiViews
 

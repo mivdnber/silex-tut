@@ -1,0 +1,21 @@
+{% extends 'baselayout.html' %}
+{% block title 'Taartje!' %}
+
+{% block body %}
+<h1>{{taartje.date}} - {{taartje.organizer}}</h1>
+<p>{{taartje.pitch}}</p>
+
+<p>Er zijn {{participants|length}} deelnemer(s)</p>
+
+<form method="post">
+  <input id="name-input" name="name" type="text">
+  <input type="submit" value="Ik doe mee!">
+</form>
+
+<ul class="participants">
+  {% for participant in participants %}
+  <li>{{participant.name}}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

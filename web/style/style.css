@@ -5,3 +5,18 @@ ul.taartjes {
     .taartjes li {
         list-style-type: none;
     }
+
+.content {
+    width: 100%;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    height: 250px;
+    background-image: url('/images/marcel.png');
+    color: yellow;
+    box-sizing: border-box;
+    padding: 24px;
+}

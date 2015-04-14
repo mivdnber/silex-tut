@@ -54,4 +54,5 @@ ln -s /vagrant/web /var/www
 cp /vagrant/config/apache.conf /etc/apache2/sites-available/tvdw.conf
 a2dissite 000-default
 a2ensite tvdw
+a2enmod rewrite
 service apache2 restart

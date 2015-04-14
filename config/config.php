@@ -1,6 +1,6 @@
 <?php
     ini_set('display_errors', 'On');
-    error_reporting(E_ERROR | E_WARNING | E_NOTICE);
+    error_reporting(-1);
     return [
     'namespace' => 'tvdw',
     'db' => [
