@@ -6,7 +6,12 @@
 <p>Schrijf je hier in voor taartje van de week!</p>
 
 <ul class="taartjes">
-
+{% for taartje in taartjes %}
+  <li>
+    <h3>{{taartje.date}} - {{taartje.organizer}}</h3>
+    <p>{{taartje.pitch}}</p>
+  </li>
+{% endfor %}
 </ul>
 
 {% endblock %}

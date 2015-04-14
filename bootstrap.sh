@@ -25,16 +25,22 @@ echo "Creating PostGIS Extension"
 sudo -u postgres psql tvdw << EOF
 create extension postgis;
 create table taartje(
-    id integer primary key,
+    id serial primary key,
     date date not null unique check (to_char(date, 'D') = '6'),
     organizer text not null,
     pitch text
 );
 create table participant(
-    id integer primary key,
+    id serial primary key,
     taartje_id integer references taartje on delete cascade,
     name text not null
 );
+
+insert into taartje(date, organizer, pitch) values
+('2015-04-17', 'Michiel', 'Hoera, taartjes!'),
+('2015-04-24', 'Berdien', 'Om nom nom'),
+('2015-05-08', 'Bart', 'Deze keer ijsjes!'),
+('2015-05-15', 'Tim', 'Zelf gebakken!');
 EOF
 
 curl -sS https://getcomposer.org/installer | php
