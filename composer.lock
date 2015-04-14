@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3b2dfb516f5a1bd1ac602ef1277224a1",
+    "hash": "97af9c124645ca856313189f11732742",
     "packages": [
         {
             "name": "jasig/phpcas",
@@ -1268,25 +1268,25 @@
         },
         {
             "name": "twig/twig",
-            "version": "dev-master",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "34e943ae7cca8f9aff666fb87c3e6860e18fc138"
+                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/34e943ae7cca8f9aff666fb87c3e6860e18fc138",
-                "reference": "34e943ae7cca8f9aff666fb87c3e6860e18fc138",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4cf7464348e7f9893a93f7096a90b73722be99cf",
+                "reference": "4cf7464348e7f9893a93f7096a90b73722be99cf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0"
+                "php": ">=5.2.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "1.18-dev"
                 }
             },
             "autoload": {
@@ -1321,7 +1321,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-03-17 06:32:29"
+            "time": "2015-01-25 17:32:08"
         },
         {
             "name": "ugent-geography/php-geotools",
@@ -1365,9 +1365,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "twig/twig": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

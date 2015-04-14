@@ -18,11 +18,10 @@ class Application extends \Silex\Application {
 
     function __construct($loader, $config) {
         parent::__construct();
-        $this['route_class'] = 'geography\webapp\SecureRoute';
         $loader->addPsr4('geography\\webapp\\', __DIR__);
         $loader->addPsr4($config['namespace'] . '\\', realpath(__DIR__ . '/../src'));
         $this->config = $config;
-
+        $this->registerServices();
         $this['debug'] = true;
     }
 
@@ -34,6 +33,7 @@ class Application extends \Silex\Application {
         $this->register(new \Silex\Provider\FormServiceProvider());
         $this->register(new \Silex\Provider\SessionServiceProvider());
         $this->register(new \Silex\Provider\UrlGeneratorServiceProvider());
+
         $this['db'] = $this->share(function() {
             return new db\Connection($this->config['db']);
         });

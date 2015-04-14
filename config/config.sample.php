@@ -1,12 +1,10 @@
 <?php return [
-    'namespace' => 'example',
+    'namespace' => 'tvdw',
     'db' => [
-        //"schema" is just another word for "database"
-        'schema' => 'postgis',
+        'database' => 'tvdw',
         'server' => 'localhost',
-        'username' => 'postgis',
-        'password' => 'postgis',
+        'username' => 'tvdw',
+        'password' => 'tvdw',
         'queriesFolder' => __DIR__ . '/../db/queries'
-    ],
-    'security' => 'cas'
+    ]
 ];
