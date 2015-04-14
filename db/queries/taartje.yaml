@@ -1,0 +1,2 @@
+taartjes: >
+    select * from taartje
