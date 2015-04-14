@@ -46,16 +46,4 @@ $app->get('/taartje/{id}', function(App $app, $id) use($db) {
     ]);
 })->bind('taartje');
 
-$app->post('/taartje/{id}', function(App $app, Request $r, $id) use($db) {
-    if(!empty($r->request->get('name'))) {
-        $query = '
-            insert into participant(taartje_id, name) values (:id, :name)
-        ';
-        $stm = $db->prepare($query);
-        $stm->execute([':id' => $id, ':name' => $r->request->get('name')]);
-    }
-
-    return $app->redirect($app->path('taartje', ['id' => $id]));
-});
-
 $app->run();
